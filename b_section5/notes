@@ -1,0 +1,56 @@
+keywords- are reserved, meaning you cannot redefine their meaning and you cant use them for something they are not intended for.
+
+C++ has 90 keywords.
+
+identifiers- are programmer made syntax such as variables
+
+operators- symbols that perform operations
+
+Preprocessor Directives
+preprocessor - processes source code before compiler sees it. strips comments and looks for directives
+
+directives - start with #
+
+preprocessor replaces that the directive with the file it is referencing
+
+comments- readable text, that programmer makes. it is never read by the compiler.
+types of comments-
+single line comment - // comment
+multi line comment - /_ comment _/
+
+the main function
+
+Every c++ program need 1 main function
+
+starting point of program
+
+return 0 indicates successful program execution
+
+name spaces
+example std::cout
+why std::cout vs cout- this prevents naming conflicts
+
+:: is a scope resolution operator
+
+when
+using namespace std;
+it allows you to replace std::cout to cout. may still cause naming issues in larger programs.
+
+Basic I/O input/output usinf cin and c out
+
+cout
+standard output stream
+console
+
+cin
+standard input stream
+keyboard
+
+<<
+insertion operator
+output streams
+
+> > extraction operator
+> > input streams
+
+count << "string" << data1 << endl;
