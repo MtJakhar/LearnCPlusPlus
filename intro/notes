@@ -1,9 +1,0 @@
-machine code- binary
-object code- also in binary but with more instructions for computer
-Assembly code - human readable code low level instruction that correspond to binary
-source code - human readable code high level that is used by programmers, such as java, c++, javascript etc..
-
-order from lowest to highest
-
-machine => object => assembly => source 
-

@@ -4,11 +4,11 @@ int main () {
   int favorite_number;
 
   // cout council out write to the council
-  // << extraction operator 
+  // << insertion operator 
   std::cout << "Enter your favorite number between 1 and 100: ";
 
   // cin reads from the council 
-  // >> insertion operator
+  // >> extract operator
   std::cin >> favorite_number;
 
   // endl prints out to next line
