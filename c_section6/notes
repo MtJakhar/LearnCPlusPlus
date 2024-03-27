@@ -1,0 +1,41 @@
+Variables and Constants
+
+what is a variable- is abstraction for a memory location. allows programmers to use meaningful names and not memory addresses.
+
+delcare and initializing variables
+
+variableType variableName;
+
+ex
+int age;
+double rate;
+string name;
+
+ex with custom types:
+Account franks_account;
+Person james;
+
+primiative data types
+integer, character, floating-point, Boolean
+
+type sizes are expressed in bits
+
+char - one byte, 8 buts
+char16_t - 16 bits
+char32_t - 32 bits
+wchar_t - largest available character set
+
+integer types
+short int , int - 16 bits
+long int - 32
+long long int - 64
+
+unsigned version used for 0 and positive integers
+type
+float, double, long double
+size
+7,15,19 repectively
+
+type bool - true false
+
+char uses single quote not double quotes for single character.
