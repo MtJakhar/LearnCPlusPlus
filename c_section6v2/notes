@@ -39,3 +39,25 @@ size
 type bool - true false
 
 char uses single quote not double quotes for single character.
+
+sizeof- an operator which determines the size in byte if a type of variable
+
+Constants
+
+what is it -have names, occupy storage, are usually typed.
+
+their value cannot change once declared!
+
+literal constants- such as x = 12, y = 1.56, name = "Frank"
+
+declared constants - const keyword
+const double pi {3.145926}
+
+defined constants - #define pi 3.145926
+uses preprocessor not used in modern c++
+
+constant expressions - constexpr keyword
+
+enumerated constants- enum keyword
+
+defined constants - #define
