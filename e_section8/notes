@@ -1,1 +1,28 @@
 statements and operators
+
+Expressions and statements
+expression- most basic building block of a program
+-sequence of operators and operands that specifies a computation
+
+-   computes a value from a number of operands
+
+examples
+
+-   34 a literal
+-   favorite_number a variable
+-   addition \*
+-   multiplication \*
+-   relational <,>
+-   assignment =
+
+statements
+
+-   a complete line of code that performs some action
+-   usually terminated with a semi-colon
+-   usually contain expressions
+-   C++ has many types of statements
+
+operators
+three types
+-unary, binary, ternary
+-assignment =
