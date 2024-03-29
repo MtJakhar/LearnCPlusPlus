@@ -1,0 +1,57 @@
+Arrays
+a compound data type of data structure all data are of same type
+
+arrays characteristics
+
+-   collection of elements
+-   fixed size
+-   stored in contiguous memory
+-   elements are accessed by their index
+-   first element is index zero
+-   last is ar index size -1
+-   in c++, their is nothing telling you if you are out of bounds of an array, the programmer has to keep track
+
+Declaring and initializing arrays
+
+formula for array
+Element_type array_name [constant number of elements] {init list}
+
+int testScores [5] {100,95,99,44, 1};
+
+int another_array [] {1,2,3,4,5}; //size automatically calculated;
+
+to access the array you have to you "array subscripting".
+array_name [element_index];
+
+Multi-dimensional arrays
+formula:
+Element_type array_name [elem1] [elem2]
+
+Vectors
+
+-   can grow and shrink in size
+-   similar syntax to arrays
+-   provided bounds unlike arrays
+-   can use functions like sort, reverse, find. and more
+-   a container in the C++ library
+-   subscripting dont tell you if out of bounds
+
+how to declare:
+#include <vector>
+
+std::vector <char> vowels (5);
+std::vector <int> test_scores (10);
+
+std::vector <char> vowels {'a','e','i','o','u'};
+
+Vector Access
+normal syntax subscripting
+vector_name [elemnt_index];
+same as arrays.
+
+vector syntax (methods)
+vector_name.at(element_index);
+using the at method.
+
+.push_back(element)
+is a method which can add an element to the end of the array.
