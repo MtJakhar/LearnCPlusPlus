@@ -2,7 +2,7 @@
 #include <vector>
 
 int main () {
-  // you dont need to initialize the vectors to make empty vectors unlike arrays.
+  // you dont need to initialize the vectors to make empty vectors unlike array
   std::vector <int> vector1 {};
   std::vector <int> vector2 {};
 
