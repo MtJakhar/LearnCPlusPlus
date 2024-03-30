@@ -26,3 +26,28 @@ operators
 three types
 -unary, binary, ternary
 -assignment =
+
+arithmetic operators
+
+-   -   / \* %
+
+increment and decrement operator
+++ --,
+adds or subtract by 1
+
+mixed type expressions
+
+C++ operations occur on the same type of operands
+
+if operands are of different types, C++ will convert one
+
+Important since it could affect caluculations results
+
+C++ will attempt to automatically convert types, if it cant a compiler error will occur
+
+conversions
+higher vs lower
+long double > double > flaot
+
+promotion conversion to higher type
+demotion conversion to a lower type
