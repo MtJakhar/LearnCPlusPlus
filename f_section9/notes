@@ -1,0 +1,36 @@
+Controlling Program Flow
+
+selection
+if, if-else, nested if, switch statement, conditional operator ?;
+
+loops
+for, while, do-while, continue and break, infinite and nested loops
+
+if statement
+  if(expr) 
+    statement;
+
+or 
+  if(expression) {
+    statement
+  }
+
+the latter "{}" is called a block statement. 
+
+if- else
+
+if(expr)
+  statement1;
+else if
+  statement2
+else
+  statement3;
+
+nested if statement
+if(expr)
+  if(expr)
+    statement1;
+  else
+    statement2;
+
+switch case
