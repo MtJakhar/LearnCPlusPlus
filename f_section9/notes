@@ -34,3 +34,23 @@ if(expr)
     statement2;
 
 switch case
+
+switch (integer_control expr) {
+  case expression_1: statement; break;
+  case expression_2: statement; break;
+  case expression_3: statement; break;
+  ...
+  case expression_n: statement; break;
+  default: statement
+}
+
+conditional operator
+(conditional expression) ? expr1 : expr2;
+
+looping
+
+for loop
+
+for(initialization; condition; increment) {
+  statement
+}
