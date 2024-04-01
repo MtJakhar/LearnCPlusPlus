@@ -54,3 +54,21 @@ for loop
 for(initialization; condition; increment) {
   statement
 }
+
+range based for loop
+
+for(var_type var_name : sequence) {
+  statement;
+}
+
+can use auto variable which looks at the variable type 
+
+ex:
+
+int scores [] {100, 90, 97};
+
+for (int score : scores)
+  cout << score << endl;
+
+range-based for loop
+
