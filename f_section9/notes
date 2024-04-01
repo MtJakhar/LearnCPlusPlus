@@ -72,3 +72,13 @@ for (int score : scores)
 
 range-based for loop
 
+
+while loop
+
+while (expr) {
+  statement;
+}
+
+do {
+  statements;
+} while (expr);
