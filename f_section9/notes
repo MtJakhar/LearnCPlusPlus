@@ -82,3 +82,21 @@ while (expr) {
 do {
   statements;
 } while (expr);
+
+continue and break statements
+
+continue
+-no further statements in the body of the loop are executed
+-control immediately goes directly to the beginning of the loop for the next iteration
+
+break 
+-no further statements in the body of the loop are executed
+-loop is immediately terminated
+-control immediately goes to the statment following the loop construct
+
+infinite loop
+
+-loops whose condition expression always evaluate to true
+-usually this is a programmer error
+-sometimes programmers use infinite loops and iclude and break statements in the body to control them
+-
