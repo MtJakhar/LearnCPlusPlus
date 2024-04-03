@@ -41,7 +41,7 @@ C++ operations occur on the same type of operands
 
 if operands are of different types, C++ will convert one
 
-Important since it could affect caluculations results
+Important since it could affect calculations results
 
 C++ will attempt to automatically convert types, if it cant a compiler error will occur
 

@@ -99,4 +99,6 @@ infinite loop
 -loops whose condition expression always evaluate to true
 -usually this is a programmer error
 -sometimes programmers use infinite loops and iclude and break statements in the body to control them
--
+
+Nested loop
+-useful for multidimensional datastructures
