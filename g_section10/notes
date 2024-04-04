@@ -1,0 +1,28 @@
+Characters and strings
+
+Character Functions
+
+// #include <cctype>
+
+// function_name(char)
+
+-functions for testing Characters
+-functions for converting character case
+
+character functions
+bool functions
+isalpha(c)- is c a letter
+isalnum(c)- is c letter or digit
+isdigit(c)- is c a digit
+islower(c)- c is lowercase
+isprint(c)- c is printable
+ispunct(c)- c is punctuation
+isupper(c)- c is uppercase
+isspace(c)- whitespace
+
+coverting functions
+tolower(c)- to lowercase
+toupper(c)- to uppercase
+
+cstyle strings
+
