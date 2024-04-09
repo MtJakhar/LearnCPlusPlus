@@ -57,7 +57,9 @@ obeject.clear();
 length() - returns size of string
 object.length();
 
-getline(cin, string) 
+getline(input string, variable where string is to be stored) 
 allows entire line to be read wont stop at whitespaces
 
+C++ strings
+use <string> library
 
