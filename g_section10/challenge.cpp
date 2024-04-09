@@ -4,25 +4,46 @@
 using namespace std; 
 
 int main () {
-
-  cout << "This is an encryption program, that uses the Caesarian cypher to encrypt your text.\n\nPlease enter a string so that it can be encrypted.\n"; 
-
   string word{}; 
   string alphabet {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"}; 
   string key {"XYZABCDEFGHIJKLMNOPQRSTUVWxyzabcdefghijklmnopqrstuvw"}; 
-  string encryptedWord{};
+  string formattedWord{};
 
-  cin >> word;
+  cout << "This is an encryption program, that uses the Caesarian cypher to encrypt or decrypt your text.\n\nAre you encrypting (e) or decrypting (d)?.\n"; 
 
-  for(char letter : word) {
-    encryptedWord += key.at(alphabet.find(letter));
-  }
+  char answer {};
+  cin >> answer; 
 
-  if(encryptedWord.length() > 0) {
-    cout << "Here is your encrypted message: \n" << encryptedWord << endl;
+  if(answer == 'e') {
+    cout << "Please enter word that is to be encrypted.\n";
+    cin >> word;
+
+    for(char letter : word) {
+      formattedWord += key.at(alphabet.find(letter));
+    }
+
+    if(formattedWord.length() > 0) {
+      cout << "Here is your encrypted message: \n" << formattedWord << endl;
+    } else {
+      cout << word << endl;
+      cout << "string is empty" << endl;
+    }
+  } else if (answer == 'd') {
+    cout << "Please enter word that is to be decrypted.\n";
+    cin >> word; 
+
+    for(char letter : word) {
+      formattedWord += alphabet.at(key.find(letter));
+    }
+
+    if(formattedWord.length() > 0) {
+      cout << "Here is your decrypted message: \n" << formattedWord << endl;
+    } else {
+      cout << word << endl;
+      cout << "string is empty" << endl;
+    }
   } else {
-    cout << word << endl;
-    cout << "string is empty" << endl;
+    cout<< "your response is invalid" << endl;
   }
 
   return 0;
