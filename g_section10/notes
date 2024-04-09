@@ -26,3 +26,38 @@ toupper(c)- to uppercase
 
 cstyle strings
 
+C++ strings
+
+-include <string>
+-std namespace
+-contiguous in memory
+-dynamic size 
+-work with input and output streams 
+-lots of useful member functions 
+-our familiar operators can be used 
+-can be easily converted to c-style strings if needed 
+-safer 
+
+use type sting to declare strings.
+
+methods
+substring - extracts substring from a string
+object.substr(start_index, length);
+
+find - returns index of char you are looking for
+object.find(search_string);
+
+erase() - removes a substring of characters from a string
+
+object.erase(startIndex, length);
+
+clear() - makes string empty
+obeject.clear();
+
+length() - returns size of string
+object.length();
+
+getline(cin, string) 
+allows entire line to be read wont stop at whitespaces
+
+
