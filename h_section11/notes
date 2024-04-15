@@ -1,2 +1,38 @@
-functions
+Functions
 
+What is a function?
+functions allow the modularization of a program
+most functions are in C++, and third party libraries
+You can create your own functions
+
+write your code to the function specification
+
+c++ has many libraries
+ex:
+cmath- which has common math calculations
+
+defining functions
+
+name- be meaningful
+parameter list- variables passed into the functions
+
+return type- the type of the data that is returned from the function
+
+body- the statements that are executed when the function is called
+
+syntax example
+
+int would be return type
+int function_name () {
+statement(s);
+return 0;
+}
+
+void return type
+void function_name () {
+statements(s);
+return; //optional
+}
+
+calling functions
+FUNCTIONS MUST BE DECLARED BEFORE THEY ARE CALLED
