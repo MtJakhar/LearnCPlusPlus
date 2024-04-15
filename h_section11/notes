@@ -36,3 +36,45 @@ return; //optional
 
 calling functions
 FUNCTIONS MUST BE DECLARED BEFORE THEY ARE CALLED
+
+Function Prototypes
+
+the compiler must know about a function before it is used.
+
+Define functions before calling them
+
+-   ok for small programs
+-   not a practical solution for larger programs
+
+Use function prototypes
+
+-   tells the compiler what it needs to know without a full function definition
+-   also called forward declarations
+-   placed at the beginning of the program
+-   Also used in out header files.
+
+ex:
+
+int function_name();
+
+int function_name() {
+statements(s);
+return 0;
+}
+
+Function parameters
+
+-   when we call a function we can pass in data to that function.
+-   in the function call they are called arguments.
+-   in the function definition they are called parameters.
+-   they must match in number, order, and in type.
+
+pass by value
+
+-   when you pass ata into a function it is passed by value
+-   a copy of the data is passed to the function does NOT affect the argument that was passed in.
+
+Formal vs Actual parameters
+
+-   Formal parameters - the parameters defined in the function header
+-   Actual parameters- the parameter used in the function call, the arguments
