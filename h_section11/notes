@@ -78,3 +78,43 @@ Formal vs Actual parameters
 
 -   Formal parameters - the parameters defined in the function header
 -   Actual parameters- the parameter used in the function call, the arguments
+
+Overloading of functions
+-We can have functions that have different parameter lists that have the same name
+
+-   abstraction mechanism since we can just think print for example
+-   a type of polymorphism- we can have the same name work with different data types to execute similar behavior
+-   the compiler must be able to tell the functions apart based on the parameter lists and argument supplied
+
+example:
+
+int addNumbers(int,int);
+double addNumbers(double,double);
+
+int main(){
+cout << addNumbers(10,20) << endl;
+cout << addNumbers(10.0, 20.0) << endl;
+return 0;
+}
+
+Passing arrays to functions
+-we can pass an array to a function by providing [] in the formal parameter decription
+
+void print_array(int numbers []);
+
+-   the array elements are not copied
+-   since the array name evaluates to the location of the array in memory- this address is what is copied
+-   so the function has no idea how many elements are in the array since all it knows is the location of the first element (the name of the array)
+
+example:
+void print_array(int numbers [], size_t size);
+int main() {
+int my_numbers[] {1,2,3,4,5};
+print_array(my_numbers, 5);
+return 0;
+}
+void print_array(int numbers [], size_t size) {
+for (size_t i{0}; i < size; ++i) {
+cout << numbers[i] << endl;
+}
+}
