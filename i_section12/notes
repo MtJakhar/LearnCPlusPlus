@@ -1,0 +1,137 @@
+pointers and reference
+
+what are pointers?
+
+-   a variable
+    whose value is an address
+
+-   what can be that address?
+    another variable
+    a function
+
+-   pointer point to variables or functions?
+
+-   if x is an integer variable and its value is 10 then i can declare a pointer that points to it
+
+-   to use the data that the pointer is pointing to you must know its type.
+
+Why use Pointers
+
+cant i just use the variable or function itself?
+
+yes, but not always
+
+-inside functions, pointers can be used to access data that are defined outside the function. those variables may not be in scope so you cant access them by their name
+
+-pointer can be used to operate on arrays very efficiently
+
+-we can allocate memory dynamically on the heap or free store.
+
+this memory doesnt even have a variable name.
+the only way to get to it is via a pointer
+
+with OO. pointers are how polymorphism works
+
+can access specific addresses in memory
+usesful in embedded and systems applications
+
+Declaring pointers
+
+syntax
+variableType \*pointerName
+
+ex:
+int *intPtr;
+double *doublePtr;
+char *charPtr;
+string *stringPtr;
+
+the above point to garbage data
+
+initializing pointer variables to point nowhere
+
+variableType \*pointerName {nullptr};
+
+ex:
+int *intPtr {};
+double *doublePtr {nullptr};
+char *charPtr {nullptr};
+string *stringPtr {nullptr};
+
+Initializing pointer variables to point nowhere
+-always initialize pointers
+-initializing to zero or nullptr represents address zero
+implies that the pointer is pointer nowhere
+
+Accessing pointer Address?
+
+& the address operator.
+
+-   dont confuse the size of pointer and the size of what it points to
+-   all pointers in a program have the same size
+-   they may be pointing to very large or very small types
+
+typed pointers
+-the compiler will make sure that the address stored in a pointer variable is of the correct type.
+
+Dereferencing a pointer- access the data of a pointer
+if a pointer has a valid address then you can access the data at the address contained in the pointer using the dereferencing operator \* which is the same as initializing the pointer.
+
+int score = 100;
+int *scorePtr = &score;
+// *scorePtr == 100
+
+*scorePtr = 200
+//*scorePtr == 200
+//score == 200
+
+Dynamic Memory Allocation
+allocating storage from the heap at runtime
+
+-   In c we can allocate storage for a time at runtime
+-   Recall C++ arrays
+    -   we had to explicitly provide the size and it was fixed
+    -   but vectors grow and shrink dynamically
+
+We can use pointers to access newly allocated heap storage.
+
+look to file dynamic memory allocation
+
+relation between arrays an pointers
+
+the value of array name is first element in the array
+the value of a pointe is an address
+if the point points to the same datatype as array element then point and array name can be used interchangeably.
+
+pointer arithmetic
+
+++ increments to next element
+intPointer++;
+
+-- decrements to next element
+intPointer--;
+
++/- increment pointer by n (which increments/decrements by the datatype size)
+
+intPointer += 2; || intPointer = intPointer + 2;
+intPointer -= 4; || intPointer = intPointer - 4;
+
+to determine number of elements between pointers
+must have same datatype.
+int n = intPointer2 - intPointer1;
+
+== / !=
+determine if pointers are of same location not their data.
+
+string s1 = "frank";
+string s2 = "frank";
+
+string *p1 = &s1;
+string *p2 = &s2;
+string \*p3 = &s1;
+
+p1 == p2 => false
+p1 == p3 => true
+
+*p1 == *p2 => true
+*p1 == *p3 => true
