@@ -100,6 +100,8 @@ return 0;
 Passing arrays to functions
 -we can pass an array to a function by providing [] in the formal parameter decription
 
+by sending just the array, you send the arrays memory address. You must specify the length of the array.
+
 void print_array(int numbers []);
 
 -   the array elements are not copied
@@ -118,3 +120,52 @@ for (size_t i{0}; i < size; ++i) {
 cout << numbers[i] << endl;
 }
 }
+
+Pass by Reference
+
+-   sometimes we want to be able to change the actual parameter from within the function body.
+-   In order to achieve this we need the location or address of the actual parameter
+-   we saw how this is the effect with array, but what about other variable types?
+-   We can use reference parameters to tell the compiler to pass in a reference to the actual parameter.
+-   the formal parameter will now be an alias for the actual parameter
+
+-simpily the pass by reference is a & symbol which you put on the parameter, You use it so that you can change the original parameter inserted. If you dont use & it will not change the original parameter it will make a copy of the parameter thus taking more space.
+
+static local variables- value is preserved between function calls
+
+static in value {10};
+
+function calls
+-functions use the 'function call stack'.
+-analogous to a stack of books
+-LIFO
+-push and pop
+
+Stack Frame or activation record
+-functions must return control to function that called it
+-each time a function is called we create a new activation record and push it on stack
+-when a function terminates we pop the activation record and return
+-local variables and function parameters are allocated on the stack.
+
+inline function
+
+an inline function is a function specified with the inline keyword, which suggests to the compiler that it should attempt to insert the complete body of the function wherever that function is called, instead of generating a function call.
+
+// Inline function declaration
+inline int add(int a, int b) {
+return a + b;
+}
+
+int main() {
+int result = add(3, 4); // Compiler may replace this with result = 3 + 4;
+std::cout << "Result: " << result << std::endl;
+return 0;
+}
+
+recursive function
+
+recursive function is a function that calls itself.
+
+recursive solving
+-base case
+-divide the rest of the problem into a subproblem and do recursive call
