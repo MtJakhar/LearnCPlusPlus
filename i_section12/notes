@@ -135,3 +135,55 @@ p1 == p3 => true
 
 *p1 == *p2 => true
 *p1 == *p3 => true
+
+passing pointers to a function
+
+pointers can point to constants, but cant change them
+but the pointer can change what its pointing to.
+
+ex: 
+
+int highScore = 100;
+int lowScore = 65;
+//cant change the dereferencing value, but can change pointer
+const int *scoreptr = &highScore;
+// can change dereferencing value but not what its pointing to.
+int *const scoreptr = &highScore; 
+//cant cahnge deref or pointer
+const int *const scoreptr = &highScore; 
+*scoreptr = 86; //Error
+scoreptr = &lowScore;
+
+pass-by-reference with pointers
+
+void data(int *ptr) {
+    *ptr *= 2;
+}
+
+
+function can return pointers
+
+type *function();
+
+pointer problems
+
+1. uninitialized pointers- pointer point randomly in memory.
+2. dangling pointer- pointer pointing to invalid data, or deleted data.
+3. not checking if new fails
+4. memory leak- not deleting previous pointer usage which are currenly taking up memory. 
+
+
+What is a reference
+
+-reference is alias for variables
+-must be initialized
+-cannot be null
+- once used cant be used for different variables
+-often used as parameters
+
+
+l and r  values
+
+l value - appears on left side of an assignment operation, is stored in memory
+l value references l values with & reference operator.
+r value - appears on right side of an assignment operation.
