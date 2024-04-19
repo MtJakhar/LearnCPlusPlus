@@ -1,0 +1,33 @@
+Classes
+
+syntax:
+      className
+class Player {
+  //declarations
+    //attributes
+    int health
+
+    //methods
+    void talk(std::string textTOSay);
+    bool isDead();
+};
+
+// you can now create objects which are instances of that class
+
+Player frank;
+Player hero;
+
+// You can use pointers to objects
+Player *enemy = new Player();
+delete enemy;
+
+Accessing methods and attributes from Classes
+
+dot operator == .
+Account frank;
+frank.balance;
+frank.deposit;
+
+member of pointer operator == ->
+frank->balance;
+frank->deposit(1000.00);
