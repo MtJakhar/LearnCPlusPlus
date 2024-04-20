@@ -31,3 +31,17 @@ frank.deposit;
 member of pointer operator == ->
 frank->balance;
 frank->deposit(1000.00);
+
+implementing member methods outside of class
+syntax
+
+type className::functionName() {
+  //implementation
+};
+
+include guards
+
+#idndef symbolName
+#define symbolname
+ //class here
+#endif
