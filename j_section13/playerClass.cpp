@@ -53,8 +53,6 @@ class Player {
 
   //if you use other constructors or default constructors along side this super constructor, then the compiler will error out because it wont know which constructor to call.
 
-
-
   //destructor, one per class release memory
   ~Player();
 
