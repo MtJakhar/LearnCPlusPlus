@@ -47,5 +47,163 @@ include guards
 #endif
 
 
-this __POINTER_WIDTH__
--this is a reserved keyword
+this pointer
+-this is a reserved keyword.
+-contains the address of the object - so its a pointer to the object.
+-can only be used in class scope.
+-all member access is done with this pointer
+
+void Account::serBalance(double bal) {
+  balance = bal; // this-> balance is implied;
+}
+
+when you should use 
+ex:
+void Account::set_balance(double balance) {
+  balance = balance; 
+}
+
+void Account::set_balance (double balance) {
+  this ->balance = balance; 
+}
+
+const correctness
+
+const methods 
+
+class Player {
+  private:
+  ...
+  public: 
+  std::string get_name() const;
+  ...
+}
+
+why do this?
+
+in the following example:
+
+const Player villain {"Villain",100,55};
+
+void display_player_name(const Player &p) {
+  cout << p.getname() << endl;
+}
+
+display_player_name(villain); // Error
+
+when we call display_player_name on the class villain we are not attempting to change the name of the player class, yet when you attempt to access the name the const blocks any attempt at retrieving the information.
+
+in order to fix this we must do the following in the Player class.
+
+class Player {
+  private:
+  ...
+  public:
+  std::string display_player_name() const;
+  // this is telling the complier that this method will not change the const variable it is acting upon.
+}
+
+Class: Static members Variables and static member functions
+
+When static is used with a member variable of a class, it makes that variable shared among all instances of the class.
+
+When static is used with a function of a class it indicates that the function is not associated with any particular variation of the class. These functions ca nbe called without creating an object. Static function can only access static variables 
+
+class MyClass {
+  public:
+    static int count;
+    static int functionName() {
+      return count;
+    }
+};
+
+int MyClass::count = 0;
+
+int main() {
+  MyClass obj1;
+  MyClass obj2;
+
+  obj1.count++;
+  cout << "obj1 count: " << obj1.count << endl; // Output: obj1 count: 1 
+  cout << "obj2 count: " << obj2.count << endl; // Output: obj2 count: 1
+
+}
+
+struct vs Classes
+
+In C++, `structs` and `classes` are both used to define custom data types, but they have some differences in terms of default member visibility and inheritance.
+
+Here's a breakdown of the differences between `structs` and `classes` in C++:
+
+1. **Default Member Visibility**:
+   - In a `struct`, members are public by default, meaning they can be accessed and modified directly from outside the struct without any restrictions.
+   - In a `class`, members are private by default, meaning they cannot be accessed or modified directly from outside the class. You need to define public member functions (getters and setters) to access or modify them.
+
+2. **Inheritance**:
+   - Inheritance works the same way for both structs and classes. They can both serve as base classes or derived classes.
+   - The only difference is the default access level. In a struct, inheritance defaults to public, while in a class, inheritance defaults to private.
+
+3. **Usage Convention**:
+   - Traditionally, `structs` are used for simple data structures with public member variables and without significant behavior or encapsulation.
+   - `classes` are used for more complex data types that encapsulate data and behavior together, often following object-oriented design principles.
+
+Here's a comparison:
+
+```cpp
+// Struct example
+struct Point {
+    // Members are public by default
+    int x;
+    int y;
+};
+
+// Class example
+class PointClass {
+    // Members are private by default
+    int x;
+    int y;
+public:
+    // Public member functions to access private members
+    int getX() { return x; }
+    void setX(int newX) { x = newX; }
+    int getY() { return y; }
+    void setY(int newY) { y = newY; }
+};
+```
+
+In summary, the choice between `structs` and `classes` in C++ often comes down to semantic clarity and intended usage. Use `structs` for simple data containers with public members and `classes` for more complex data types with encapsulation and behavior. However, in modern C++, the distinction between `structs` and `classes` is becoming less significant, and it's more about personal or team preference and code style guidelines.
+
+Friend Functions:
+A friend function of a class is a function that is not a member of the class but has access to its private and protected members.
+Friend functions are declared inside the class with the friend keyword and defined outside the class like normal functions.
+They can access private and protected members directly without needing to go through public member functions.
+Friend functions can be useful for implementing certain operations that require access to private members but are conceptually related to the class.
+Example of a friend function:
+
+cpp
+Copy code
+class MyClass {
+private:
+    int privateMember;
+public:
+    MyClass(int value) : privateMember(value) {}
+
+    friend void friendFunction(MyClass obj); // Declaration of friend function
+
+    // Member function to access private member
+    int getPrivateMember() {
+        return privateMember;
+    }
+};
+
+// Definition of friend function
+void friendFunction(MyClass obj) {
+    // Friend function can access private member directly
+    cout << "Private member accessed by friend function: " << obj.privateMember << endl;
+}
+
+int main() {
+    MyClass obj(42);
+    friendFunction(obj); // Calling friend function
+    return 0;
+}
