@@ -45,3 +45,7 @@ include guards
 #define symbolname
  //class here
 #endif
+
+
+this __POINTER_WIDTH__
+-this is a reserved keyword

@@ -170,7 +170,7 @@ pointer problems
 1. uninitialized pointers- pointer point randomly in memory.
 2. dangling pointer- pointer pointing to invalid data, or deleted data.
 3. not checking if new fails
-4. memory leak- not deleting previous pointer usage which are currenly taking up memory. 
+4. memory leak- not deleting previous pointer usage which are currently taking up memory. 
 
 
 What is a reference
