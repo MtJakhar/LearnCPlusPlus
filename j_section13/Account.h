@@ -17,12 +17,8 @@ public:
   double get_balance() {return balance;}
 
   //methods is be declared outside of class
-  void set_name(std::string n) {
-    name = n;
-  };
-  std::string get_name() {
-    return name;
-  };
+  void set_name(std::string n) {};
+  std::string get_name() {};
 
   bool deposit(double amount);
   bool withdraw(double amount);

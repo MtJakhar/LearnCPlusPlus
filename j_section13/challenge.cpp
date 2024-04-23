@@ -21,7 +21,17 @@ Additionally,
 here is what the project files should look like
 -movie.h- include the file with the movie class specification
 -movie.cpp- file with the movie class implementation
--movies.h include the Moices class specification
+-movies.h include the Movies class specification
 -Movies.cpp- file with the Movies class implementation.
 -main.cpp- the main driver that creates a Movies object and adds and increments movies
 */
+
+#include <iostream>
+#include <string>
+#include "Movie.h"
+
+using namespace std;
+
+int main () {
+  Movie("StarWars", "PG", 5);
+}
