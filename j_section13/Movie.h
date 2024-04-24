@@ -1,8 +1,7 @@
-#ifndef _MOVIE_
-#define _MOVIE_
+#ifndef _MOVIE_H_
+#define _MOVIE_H_
 
 #include <string>
-#include <iostream>
 
 class Movie {
   private:
@@ -13,21 +12,26 @@ class Movie {
 
   public:
   //constructors
-
   //delegator constructor
-  Movie(std::string movie_name, std::string movie_rating, int times_watched) : name{movie_name}, rating{movie_rating}, watched{times_watched} {};
+  Movie(std::string name_val, std::string rating_val, int watched_val);
 
-  //default constructor
-  Movie() : Movie("None", "None", 0) {};
+  //copy constructor
+  Movie(const Movie &source);
 
-  //destructors
+  //destructor
   ~Movie();
 
-  //methods go to movie.cpp
-  void increment_watched(int number) {};
-  std::string getName() {};
-  std::string getRating() {};
-  int getWatched() {};
+
+  //methods declarations
+  void increment_watched();
+  std::string getName() const;
+  std::string getRating()const;
+
+  void set_name(std::string name_val);
+  void set_rating(std::string rating_val);
+  void set_watched(int watched_val);
+
+  void display() const;
 };
 
 #endif

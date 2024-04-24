@@ -14,7 +14,6 @@ class Player {
   public:
   //overload constructors- You can have any number of constructors, but they must have a unique signature/ args
 
-
   // default constructors create a no args constructor if no is defined. If a constructor is declared then the default no args constructor will not be applied. If you want a no args constructor while have other types of constructors, you must then define the no args constructor.
   //this is the default constructor
   Player() {
