@@ -32,7 +32,7 @@ void Movies::display() const {
     std::cout << "sorry, no movies to display\n" << std::endl;
   } else {
     std::cout << "\n==========================" <<std::endl;
-    for(auto movie: moviesList) {
+    for(const auto &movie: moviesList) {
       movie.display();
     }
     std::cout << "\n==========================" <<std::endl;
