@@ -1,0 +1,12 @@
+Operator overloading
+
+overloaing operators is simply combining two operators to form a new Operator
+ex:
++, = 
++= , which increments
+
+suppose we have a number class that models any number
+
+overloading the copy assignment operator (deep copy)
+
+Type &Type :: operator=(const Type &rhs);
