@@ -87,3 +87,28 @@ ostream& operator << (ostream& COUT, myCollection& myCollection) {
   }
   return COUT;
 }
+
+syntax for overloading operators
+
+for Uniary operators (++, --, -, !)
+These operators dont require any parameters since they are acting on one object
+
+//where OP = operator sign that is to be overloaded with additional capabilities
+//add const if you dont what to change the original dataType inserted
+
+ReturnType operatorOP();
+ReturnType operatorOP() const;
+
+for Binary operators(+,-,==,!=,<,>) 
+
+ReturnType operatorOp(parameters)
+
+Mystring operator-(const Mystring &someString);
+
+
+
+overloading ostream operators << >>
+
+ostram &operator<<(ostream &os, const Mystring &obj) {
+  
+}
