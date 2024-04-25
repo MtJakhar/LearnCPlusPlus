@@ -1,12 +1,89 @@
 Operator overloading
 
-overloaing operators is simply combining two operators to form a new Operator
-ex:
-+, = 
-+= , which increments
+Operator overloading
 
-suppose we have a number class that models any number
+operator functions- made in order to define how a  certain operator will interact with a specific datatype.
 
-overloading the copy assignment operator (deep copy)
+4 + 5; the plus operator will sum these by default
 
-Type &Type :: operator=(const Type &rhs);
+if there is a car class,
+but what happens with a user created datatype?
+car1 + car2;
+
+It will error out because the car1 and car3 operands, which are things that the operator is acting upon, is unknown to the  + operator. 
+
+In order to make this code work we must overload the plus operator with additional capabilities to interact with the car dataType.
+
+one rule to operator functions: 
+they need to be called "operator" and then specify the operator you want to give additional capabilities to. 
+
+operator function with ostream datatypes.
+
+struct YoutubeChannel {
+  string Name;
+  int subscriberCount;
+
+  YoutubeChannel(string name, int subscriberCount) {
+    Name = name;
+    subscriberCount = subscriberCount;
+  }
+}
+YoutubeChannel yt1 = YoutubeChannel("code beauty", 75000);
+YoutubeChannel yt2 = YoutubeChannel("code ugly", 70000);
+cout << yt1;
+
+syntax 
+  passing these parameters via reference 
+  you want to pass by reference when interacting with data that takes alot of memory. 
+
+void operator << (ostream& COUT, YoutubeChannel& YoutubeChannel) {
+  COUT << "Name: " << ytChannel.Name << endl;
+  COUT << "Subscribers: " << ytChannel.subscriberCount << endl;
+}
+we can now pass in the parameters to get the solution
+operator<<(cout , yt1);
+==
+cout << yt1;
+
+
+for the following 
+
+cout << yt1 << yt2 
+
+we will get an error 
+
+in order to fixed this we must do the following
+//this is a global operator
+ostream& operator << (ostream& COUT, YoutubeChannel& YoutubeChannel) {
+  COUT << "Name: " << ytChannel.Name << endl;
+  COUT << "Subscribers: " << ytChannel.subscriberCount << endl;
+  return COUT;
+}
+
+struct MyCollection {
+  list <YoutubeChannel> mychannels;
+}
+
+MyCollection myCollection;
+myCollection += yt1;
+
+in order to overload the += operator we must do the following
+
+struct myCollection {
+  list <YoutubeChannel> myChannels;
+//local operator
+//because operator += is a member function of myCollection we dont have to pass it as a parameter
+  void operator += (YoutubeChannel& channel) {
+    this->myChannels.push_back(channel);
+  }
+}
+now this works
+myCollection += yt1;
+myCollection += yt2;
+
+ostream& operator << (ostream& COUT, myCollection& myCollection) {
+  for(YoutubeChannel ytChannel : myCollection.myChannels) {
+    COUT << ytChannel << endl;
+  }
+  return COUT;
+}
