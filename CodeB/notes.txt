@@ -1,0 +1,46 @@
+Table of contents
+
+Introduction to variables 
+Rules for naming variables
+Data types in C++ and how to use sizeof operator
+Data type overflow
+What is ASCII table
+Simple, fun program for ciphering words into ASCII
+If/else statement (Build a program that checks odd/even numbers + flowchart explanation)  
+Nested if/else statement (Build a program that determines the type of a triangle + flowchart)  
+Operators in C++ (arithmetic, relational, logical, assignment operators)
+Swapping values of two variables with or without a third variable
+Build BMI Calculator application + flowchart
+Ternary (Conditional) operator (Build a Guessing game app)
+Switch/case statement part 1 (Build Calculator app)
+Switch/case statement part 2 (Build program that checks number of days in a month)
+While loop part 1 + infinite loop example
+While loop part 2 (Build a program for counting digits of a number)
+While loop part 3 (Build a program for reversing digits of a number)
+Do while loop (Program for PIN validation)
+What is the difference between While loop and Do While loop
+For loop (Build a program for calculating the factorial of a number)
+Nested loops (Nesting do while loop and for loop)
+Nested for loop (Build Multiplication table app)
+Program for drawing rectangle shape 
+Program for drawing triangle and inverted/reversed triangle shapes
+Introduction to functions
+Functions with parameters/arguments (multiple and default)
+Function return statement (Build program for checking prime numbers)
+Function overloading
+Build ATM app
+Generic functions and templates
+Recursion and recursive functions
+Introduction to OOP, What are classes and objects
+OOP Constructors and class methods
+OOP Encapsulation, GIT: https://github.com/TrueCodeBeauty/Enc...
+OOP Inheritance, GIT: https://github.com/TrueCodeBeauty/Inh...
+OOP Polymorphisam, GIT: https://github.com/TrueCodeBeauty/Pol...
+Introduction to pointers
+Void pointers
+Pointers and arrays
+Return multiple values from a function using pointers
+Dynamic arrays, create/change arrays at runtime
+Multidimensional dynamic arrays, Two-dimensional array 
+Detecting errors in code using PVS Studio
+Explaining Memory Leaks

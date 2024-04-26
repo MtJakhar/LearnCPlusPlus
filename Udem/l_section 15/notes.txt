@@ -1,0 +1,78 @@
+Inheritance
+
+what is it?
+-provides a method for creating new classes from existing classes.
+-the new class contains the data and behaviors of the existing classes
+-allow for reuse of existing classes
+-allows us to focus on the common attributes among a set of classes
+-allows new classes to modify behaviors of existing classes to make it unique, without modifying original class
+
+Base class 
+the class being extended or inherited from
+
+Derived class 
+the class being created from the case class
+will inherit attributes and operations from Base class
+
+is_A relationship - basically means that the child/derived class is derived from the parent/base class. child classes are sub-classes of base classes.
+
+generalization- combining similar classes into a single, more genral class based on common attributes.
+
+specialization- crating new classes from existing classes providing more specialized attributes or operations
+
+inheritance or class heirarchies
+-organization of our inheritance relationships.
+
+public inheritance  vs composition
+
+composition
+-has a relationship
+-person has an account
+-player has a special attack
+-circle has a location
+
+both allow reuse of existing classes
+
+composition
+
+class person {
+  private:
+  string name ; //has a name
+  Account account; //has a account
+}
+
+syntax
+
+class Base {
+  //base class members...
+}
+
+class Derived: access-specifier Base {
+  //derived class members...
+}
+
+access-specifier can be: public, private, or protected.
+
+three types of inheritance
+public, private, protected
+
+public-makes is-a relationship
+
+private, and protected - established derived class has a base class relationship.
+
+protected members and class access
+
+class Base {
+  protected:
+  //protected base class members ...
+};
+
+Accessible from the base class itself
+Accessible from classes derived from base
+not accessible by objects of base or derived
+
+
+
+
+
+
