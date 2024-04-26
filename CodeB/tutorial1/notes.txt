@@ -1,0 +1,11 @@
+What is C++
+
+general-purpose: can create programs, games, os, browsers, Encapsulation
+
+Compiled- converts human code to machine code, need a compiler to run.
+
+Case-sensitive- upper vs lower case
+
+Source code =compiler> machine code
+
+
