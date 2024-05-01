@@ -31,8 +31,6 @@ class YouTubeChannel {
     }
   }
 
-
-
 };
 
 int main () {
