@@ -21,7 +21,7 @@ int main () {
   cout<< "pointer: " << *pointer << endl;
   cout<< "n: " << n << endl;
 
-  //you cant assign a value to a pointer if a pointer does not have an address it is pointing to, by default pointers do not point to anything.
+  //you can not assign a value to a pointer if a pointer does not have an address it is pointing to, by default pointers do not point to anything.
   int v;
   int* ptr=&v;
   *ptr = 7;
@@ -30,10 +30,8 @@ int main () {
   /*
   notes:
   you cant use variables to store memory addresses.  
-  int variable = &n;
+  int variable = &n; //error
 
   the pointer must be of the same dataType as the Address value it is pointing to.
-
-
   */
 }
