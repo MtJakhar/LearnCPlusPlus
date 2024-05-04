@@ -71,8 +71,32 @@ Accessible from the base class itself
 Accessible from classes derived from base
 not accessible by objects of base or derived
 
+composition - means another class uses another class that it is not derived from
 
 
+class parent {
 
+}
 
+class child : access-specifier parent {
+
+}
+
+constructors and destructors in inheritance
+
+if a child class is created, its parents constructor is called before its own constructor is called.
+if a child class is deleted, the child class is deleted first than the parents class is deleted.
+
+you can use the parent class constructor in a child class
+
+class patent {
+  parent(int);
+}
+
+class child {
+  :parent(x)
+  child(int) {
+
+  }
+}
 
