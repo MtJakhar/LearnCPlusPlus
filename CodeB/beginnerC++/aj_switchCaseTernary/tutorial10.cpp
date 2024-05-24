@@ -1,22 +1,55 @@
+// #include <iostream>
+// using namespace std;
+
+// int main () {
+//   //year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+//   int year, month;
+//   cout << "Year, month: ";
+//   cin >> year >> month;
+  
+//   switch(month){
+//     case 2: 
+//     (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? cout << "29 days month." : cout << "28 days month.";
+//     break;
+
+//     case 4:
+//     case 6:
+//     case 9: 
+//     case 11:
+//     cout << "30 days month.";
+//     break;
+
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//     cout << "31 days month.";
+//     break;
+//     default: cout << "Not valid!";
+//   }
+// }
 #include <iostream>
 using namespace std;
 
 int main () {
-  //year % 4 == 0 && year % 100 != 0 || year % 400 == 0
   int year, month;
-  cout << "Year, month: ";
-  cin >> year >> month;
   
-  switch(month){
+  cout << "enter Year and month\n";
+  cin >> year >> month;
+
+  switch(month) {
     case 2: 
-    (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? cout << "29 days month." : cout << "28 days month.";
+    (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? cout << "29 days month." : cout << "28 days month";
     break;
 
     case 4:
     case 6:
-    case 9: 
+    case 9:
     case 11:
-    cout << "30 days month.";
+    cout << "30 days month";
     break;
 
     case 1:
@@ -26,8 +59,8 @@ int main () {
     case 8:
     case 10:
     case 12:
-    cout << "31 days month.";
+    cout << "31 dats month.";
     break;
-    default: cout << "Not valid!";
+    default: cout << "Not valid";
   }
 }
