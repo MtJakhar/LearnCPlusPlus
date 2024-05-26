@@ -36,3 +36,9 @@ int main() {
   for_each(v.begin(), v.end(), [d](int x){cout << x << " my power level is over " << d << endl;});
   
 }
+
+int main() {
+  int d = 1000;
+  vector <int> v {2,3,7,14,23};
+  for_each(v.begin(), v.end(), [d](int x){cout << x << " my power level is over " << d << endl;})
+}
