@@ -7,6 +7,19 @@ using namespace std;
 
 //this is be the declaration 
 //right click the function to find definition, or press f12
+// void functionName();
+
+// int main () {
+//   functionName();
+//   cout << "Hello from main()\n";
+// }
+
+
+// //this is the definition
+// void functionName() {
+//   cout<< "Hello from functionName()" << endl;
+// }
+
 void functionName();
 
 int main () {
@@ -14,8 +27,6 @@ int main () {
   cout << "Hello from main()\n";
 }
 
-
-//this is the definition
 void functionName() {
-  cout<< "Hello from functionName()" << endl;
+  cout << "hello from functionName()" << endl;
 }
