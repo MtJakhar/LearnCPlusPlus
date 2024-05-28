@@ -2,7 +2,7 @@
 
 using namespace std;
 /*
-  virtual function - is a function that is defined in the parent calss, but is also redefined in a child class.
+  virtual function - is a function that is defined in the parent class, but is also redefined in a child class.
 
   its purpose is to give you the ability of runtime polymorphism.
 
@@ -23,6 +23,7 @@ class Instrument {
 
   //Pure virtual functions- force derived class to have their own version of MakeSound, and the parent class will not have its own implementation
   //if a class has at least one Pure virtual function in it, it is called a Abstract class
+  
   //Below is the syntax of a pure virtual function
   virtual void MakeSound() = 0;
 
