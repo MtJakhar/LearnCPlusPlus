@@ -76,7 +76,6 @@ class CookingYouTubeChannel:public YouTubeChannel {
 };
 
 class SingerYouTubeChannel:public YouTubeChannel {
-
   public:
   SingerYouTubeChannel(string name, string ownerName):YouTubeChannel(name, ownerName) {}
 
@@ -88,11 +87,25 @@ class SingerYouTubeChannel:public YouTubeChannel {
   }
 };
 
+class GunsYouTubeChannel: public YouTubeChannel {
+  public:
+  GunsYouTubeChannel(string name, string ownerName) : YouTubeChannel(name, OwnerName) {}
+  void Practice() {
+    cout << OwnerName << "Practicing Shooting, Assembling, Cleaning..." << endl;
+    ContentQuality++
+  }
+
+};
+
+
+
 int main () {
   YouTubeChannel ytChannel("CodeBeauty", "Saldina");
   YouTubeChannel ytChannel2("AmySings" , "Amy");
   CookingYouTubeChannel cookingChannel("Amy's Kitchen", "Amy");
   SingerYouTubeChannel singingChannel("John's Music", "John Star");
+  GunsYouTubeChannel gunChan("gunChan", "The Man");
+
   cookingChannel.Subscribe();
   cookingChannel.PublishVideo("How to Cook Steak");
   cookingChannel.PublishVideo("How to Apple Pie");
