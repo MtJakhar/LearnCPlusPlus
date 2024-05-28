@@ -24,6 +24,19 @@ struct YouTubeChannel {
   }
 };
 
+struct Person {
+  string Name;
+  int Age;
+
+  Person (string name, int age)  {
+    Name = name;
+    Age = age;
+  }
+  bool operator==(const Person& rando) const {
+    return this->Name == rando.Name;
+  }
+};
+
 /*
 operator function syntax
 return type operatorOPERATIONSYMBOL()
