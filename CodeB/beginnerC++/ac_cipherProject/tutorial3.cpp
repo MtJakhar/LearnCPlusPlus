@@ -1,8 +1,3 @@
-/*
-
-*/
-
-
 // int main () {
 //   //below are casting operators  both lines do the same thing
 //   // cout << (int)'a' << endl;
