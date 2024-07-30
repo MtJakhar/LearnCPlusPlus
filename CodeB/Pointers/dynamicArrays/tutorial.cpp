@@ -24,9 +24,6 @@ int main () {
   delete[] myArray;
   //assign value null to array, so that it will not 
   myArray = NULL;
-
-
-
 }
 
 /* to create dynamic arrays
