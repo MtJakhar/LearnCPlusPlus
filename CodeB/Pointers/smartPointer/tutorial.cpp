@@ -12,38 +12,42 @@ smart pointer - deallocate memory automatically
 
 
 
-class MyClass {
-  public:
+// class MyClass {
+//   public:
 
-  MyClass() {
-    cout << "constructor invoked";
-  }
-  ~MyClass() {
-    cout << "destructor invoked";
-  }
-};
+//   MyClass() {
+//     cout << "constructor invoked";
+//   }
+//   ~MyClass() {
+//     cout << "destructor invoked";
+//   }
+// };
 
 //unique pointers
 // unique_ptr<dataType>UniquePointerName = make_unique<dataType>(input);
 
-// int main () {
-//   //unique syntax
-//   unique_ptr<int>uniquePointer =  make_unique<int>(25);
-//   /*
-//   by using * you can dereference a unique pointer
-//   */
-//  cout << uniquePointer << endl;//address
-//  cout << *uniquePointer << endl;// value 25
-//  //unique pointer cant share address with other pointers
-//  //this wont work
-// //unique_ptr<int>uniquePointer2 = uniquePointer;
-//  //this will work cause we are moving the pointer to another pointer
-//  unique_ptr<int>uniquePointer2 = move(uniquePointer);
+int main () {
+  //unique syntax
+  unique_ptr<int>uniquePointer =  make_unique<int>(25);
+  /*
+  by using * you can dereference a unique pointer
+  */
+ cout << uniquePointer << endl;//address
+ cout << *uniquePointer << endl;// value 25
+ //unique pointer cant share address with other pointers
+
+ //this wont work
+ //unique_ptr<int>uniquePointer2 = uniquePointer;
+
+ //this will work cause we are moving the pointer to another pointer
+ unique_ptr<int>uniquePointer2 = move(uniquePointer);
  
-//  //first pointer is now empty;
-// //  cout << *uniquePointer << endl;
-//  cout << *uniquePointer2 << endl;
-// }
+ //first pointer is now empty;
+ //  cout << *uniquePointer << endl;
+ cout << *uniquePointer2 << endl;
+
+ //unique pointer cant share addresses without pointers
+}
 
 // int main() {
 //   {
