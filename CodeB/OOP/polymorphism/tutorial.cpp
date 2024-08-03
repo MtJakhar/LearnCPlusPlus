@@ -92,7 +92,7 @@ class GunsYouTubeChannel: public YouTubeChannel {
   GunsYouTubeChannel(string name, string ownerName) : YouTubeChannel(name, OwnerName) {}
   void Practice() {
     cout << OwnerName << "Practicing Shooting, Assembling, Cleaning..." << endl;
-    ContentQuality++
+    ContentQuality++;
   }
 
 };
