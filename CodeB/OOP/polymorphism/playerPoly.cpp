@@ -6,93 +6,66 @@ class Creature {
   private:
   int Hp;
   int Mana;
-  int AttackPower;
-  int AbilityPower;
+  int OverallStats;
 
   protected:
   string Name;
 
   public:
-
-  Creature(string name, int hp, int mana, int attackPower, int abilityPower) {
+  Creature(string name, int hp, int mana, int overallStats) {
     Name = name;
     Hp = hp;
     Mana = mana;
-    AttackPower = attackPower;
-    AbilityPower = abilityPower;
+    OverallStats = overallStats;
   }
 
   void GetInfo() {
     cout << "Name: " << Name << endl;
     cout << "Hp: " << Hp << endl;
     cout << "Mana: " << Mana << endl;
-    cout << "AttackPower: " << AttackPower << endl;
-    cout << "AbilityPower: " << AbilityPower << endl;
+    cout << "OverallStats: " << OverallStats << endl;
   }
-
-  void Attack() {
-    cout << Name << " is attacking" << endl;
-  }
-
 };
 
-class Player: public Creature {
+class Hero:public Creature {
   private:
   string Role;
 
   public:
-  Player(string name, string role, int hp, int mana, int attackPower, int abilityPower): Creature(name, hp, mana, attackPower, abilityPower) {
+  Hero(string name, string role, int hp, int mana, int overallStats): Creature(name, hp, mana, overallStats) {
     Role = role;
   }
 
-  void BattleCry() {
-    cout << "I am " << Name << ", and I will vanquish you monster!!!" << endl;
+  void Attack() {
+    cout << Name << " attacks" << endl;
   }
 };
 
-class BossMonster: public Creature {
+class BossMonster:public Creature {
   private:
-  string SpecialAttack;
+  int SpecialAttack;
 
   public:
-  BossMonster(string name, string specialAttack, int hp, int mana, int attackPower, int abilityPower): Creature(name, hp, mana, attackPower, abilityPower) {
+  BossMonster(string name, int specialAttack, int hp, int mana, int overallStats): Creature(name, hp, mana, overallStats) {
     SpecialAttack = specialAttack;
   }
 
-  void BattleCry() {
-    cout << "I am " << Name << ", and I will consume you!!!" << endl;
-  }
-
-  void UseSpecialAttack() {
-    cout << SpecialAttack << " has been used, all heros lose half of their health" << endl;
+  void Attack() {
+    cout << Name << " uses special attack, enemies take " << SpecialAttack << " damage" << endl;
   }
 };
 
-
-
 int main () {
-  Creature Goblin("gobo", 50, 10, 10, 10);
-  Creature Goblin2("Hob gobo", 70, 20, 20, 20);
 
-  Player HeroOne("Neo", "fighter", 200, 100, 20, 20);
-  Player HeroTwo("Duo", "fighter", 100, 3000, 10, 30);
+  Creature Goblin("gobo", 10, 10, 30);
+  Goblin.GetInfo();
 
-  BossMonster Orc("Graum", "Smash", 300, 100, 40, 40);
+  Hero Jason("Jason Argo", "warrior", 100, 10, 200);
+  Jason.Attack();
 
-  Goblin.Attack();
-  Goblin2.Attack();
-
-  HeroOne.Attack();
-  HeroOne.BattleCry();
-
-  Orc.Attack();
-  Orc.BattleCry();
-
-  Creature * CPointer = &HeroOne;
-  Creature * BPointer = &Orc;
-
-  CPointer->GetInfo();
-  BPointer->Attack();
+  BossMonster Asmodeus("asmodeus", 100, 200, 200, 500);
+  Asmodeus.Attack();
+  Asmodeus.GetInfo();
 
   return 0;
 }
