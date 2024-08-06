@@ -85,6 +85,4 @@ int main () {
   myCollection += yt2;
   myCollection -= yt2;
   cout << myCollection;
-
-
 }
