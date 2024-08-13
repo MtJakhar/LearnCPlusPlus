@@ -6,11 +6,12 @@ using namespace std;
 friend functions- has access to private and protected members of a class it is not apart of.
 
 -dont over use the friend keyword, it will break encapsulation.
+
 -friendship is not mutual in programming. Even though homework class can access the equilateralTriangle. the equilateralTriangle wont be able to access the homework class
+
 -Friendship is not inherited.
 -used most for overloading operators functions in classes.
 */
-
 
 class EquilateralTriangle {
   private:
@@ -29,7 +30,6 @@ class EquilateralTriangle {
 
     //You can also make friend classes
     friend class Homework;
-
 
 };
 
