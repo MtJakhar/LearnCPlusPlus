@@ -69,7 +69,6 @@ ostream& operator<<(ostream& COUT, MyCollection& myCollection) {
   return COUT;
 }
 
-
 int main () {
   YouTubeChannel yt1 = YouTubeChannel("codeBeauty", 75000);
   YouTubeChannel yt2 = YouTubeChannel("2nd channel", 80000);
